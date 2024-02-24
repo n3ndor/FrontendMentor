@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div>
+    <h1 class="text-xl font-bold text-center mb-4">My &lt;Frontend Mentor&gt; Projects:</h1>
+    <ul id="projectList" class="list-disc"></ul>
+  </div>
+
+  <script>
+    fetch('projects.json')
+      .then(response => response.json())
+      .then(data => {
+        const projectList = document.getElementById('projectList');
+        data.forEach(project => {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = `<a href="${project.url}" class="text-blue-500 hover:text-blue-700">${project.name}</a>`;
+          projectList.appendChild(listItem);
+        });
+      })
+      .catch(console.error);
+  </script>
+</body>
+</html>
