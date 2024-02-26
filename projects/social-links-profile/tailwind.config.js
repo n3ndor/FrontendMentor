@@ -1,0 +1,1 @@
+//created a tailwind config file for the IntelliSence auto suggestions
