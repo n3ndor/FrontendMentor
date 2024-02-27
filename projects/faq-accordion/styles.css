@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+  .accordion {
+    @apply bg-light-pink;
+  }
+
+  .accordion-header {
+    @apply text-lg font-semibold;
+  }
+
+  .accordion-button {
+    @apply bg-dark-purple text-white p-4 w-full text-left;
+  }
+
+  .accordion-content {
+    @apply hidden p-4 text-grayish-purple;
+  }
+}
