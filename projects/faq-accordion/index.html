@@ -5,33 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'light-pink': 'hsl(275, 100%, 97%)',
+            'grayish-purple': 'hsl(292, 16%, 49%)',
+            'dark-purple': 'hsl(292, 42%, 14%)',
+          },
+          fontFamily: {
+            'work-sans': ['Work Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+<style>
+  @font-face {
+    font-family: 'Work Sans';
+    src: url('./assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400; /* Normal weight */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Work Sans';
+    src: url('./assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Semi-bold weight */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Work Sans';
+    src: url('./assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+  }
+</style>
+
   <title>Frontend Mentor | FAQ Accordion</title>
 </head>
-<body class="flex items-center justify-center h-screen bg-gray-100">
-  <div class="bg-white p-8 rounded-lg shadow max-w-lg w-full mx-auto">
+<body class="bg-light-pink font-work-sans font-weight flex flex-col items-center py-[18vh] min-h-screen text-dark-purple">
+  <div class="bg-[url('./assets/images/background-pattern-desktop.svg')] w-full h-[36vh] bg-cover fixed top-0 left-0 right-0 z-0"></div>
+  <div class="bg-white p-6 sm:p-12 rounded-lg shadow-lg max-w-[90%] sm:max-w-2xl w-full z-10" >
     
-    <div class="flex">
-      <img src="./assets/images/icon-star.svg" alt="star" class="size-8">
-      <h2 class="text-3xl font-bold ml-2">FAQs</h2>
+    <div class="flex my-6">
+      <img src="./assets/images/icon-star.svg" alt="star" class="size-12 mt-0">
+      <h2 class="text-5xl font-bold ml-2">FAQs</h2>
     </div>
 
-    <div class="accordion-item mb-2">
-      <button class="accordion-question flex justify-between items-center w-full p-4">
+    <div class="accordion-item">
+      <button class="accordion-question flex justify-between items-center w-full py-4 sm:p-4 text-lg font-bold hover:text-fuchsia-600">
         What is Frontend Mentor, and how will it help me?
         <img src="./assets/images/icon-plus.svg" alt="Open" class="icon-plus">
       </button>
-      <div class="accordion-answer hidden p-4">
+      <div class="accordion-answer hide sm:p-4 mb-2 text-grayish-purple">
         Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
       </div>
     </div>
     <hr>
 
-    <div class="accordion-item mb-2">
-      <button class="accordion-question flex justify-between items-center w-full p-4">
+    <div class="accordion-item">
+      <button class="accordion-question flex justify-between items-center w-full py-4 sm:p-4 text-lg font-bold hover:text-fuchsia-600">
         Is Frontend Mentor free?
         <img src="./assets/images/icon-plus.svg" alt="Open" class="icon-plus">
       </button>
-      <div class="accordion-answer hidden p-4">
+      <div class="accordion-answer hide sm:p-4 mb-2 text-grayish-purple">
         Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
         option providing access to a range of projects suitable for all skill levels.        
       </div>
@@ -39,25 +80,23 @@
     <hr>
 
     <div class="accordion-item mb-2">
-      <button class="accordion-question flex justify-between items-center w-full p-4">
+      <button class="accordion-question flex justify-between items-center w-full py-4 sm:p-4 text-lg font-bold hover:text-fuchsia-600">
         Can I use Frontend Mentor projects in my portfolio?
         <img src="./assets/images/icon-plus.svg" alt="Open" class="icon-plus">
       </button>
-      <div class="accordion-answer hidden p-4">
-        Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-        way to showcase your skills to potential employers!
+      <div class="accordion-answer hide sm:p-4 mb-2 text-grayish-purple">
+        Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!
       </div>
     </div>
     <hr>
 
     <div class="accordion-item mb-2">
-      <button class="accordion-question flex justify-between items-center w-full p-4">
-        How can I get help if I'm stuck on a Frontend Mentor challenge?
+      <button class="accordion-question flex justify-between items-center w-full py-4 sm:p-4 text-lg font-bold hover:text-fuchsia-600">
+        How can I get help if I'm stuck on a challenge?
         <img src="./assets/images/icon-plus.svg" alt="Open" class="icon-plus">
       </button>
-      <div class="accordion-answer hidden p-4">
-        The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-        channel where you can ask questions and seek support from other community members.        
+      <div class="accordion-answer hide sm:p-4 mb-2 text-grayish-purple">
+        The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.        
       </div>
     </div>
 
